@@ -1,16 +1,16 @@
-# 🏦 Bank Customer Segmentation
+#  Bank Customer Segmentation
 
 > An end-to-end machine learning project using K-Means clustering to identify meaningful customer segments based on credit-card usage and financial behaviour.
 
 ---
 
-## 📌 Project Overview
+##  Project Overview
 
 Banks have customers with very different spending, payment and credit-card usage patterns. Treating every customer in the same way can lead to ineffective marketing and customer engagement strategies.
 
 This project applies **unsupervised machine learning** to identify groups of customers with similar financial behaviours.
 
-### 🎯 Objective
+###  Objective
 
 The objective is to:
 
@@ -22,7 +22,7 @@ The objective is to:
 
 ---
 
-## 🛠️ Technologies Used
+##  Technologies Used
 
 - Python
 - Pandas
@@ -38,7 +38,7 @@ The objective is to:
 
 ---
 
-## 🔄 Project Workflow
+##  Project Workflow
 
 ```text
 Dataset
@@ -68,7 +68,7 @@ Business Recommendations
 
 ---
 
-## 📊 Dataset
+##  Dataset
 
 The dataset contains approximately **9,000 credit-card customer records** with **18 behavioural and financial variables**.
 
@@ -97,7 +97,7 @@ The dataset contains approximately **9,000 credit-card customer records** with *
 
 ---
 
-## 🧹 Data Preprocessing
+##  Data Preprocessing
 
 The following preprocessing steps were performed:
 
@@ -130,7 +130,7 @@ A `log1p()` transformation was applied to reduce the influence of extreme values
 
 ---
 
-## 📈 Exploratory Data Analysis
+##  Exploratory Data Analysis
 
 Exploratory Data Analysis was performed to understand customer behaviour and identify patterns across important financial variables.
 
@@ -153,7 +153,7 @@ The analysis focused on:
 
 ---
 
-## 📐 Selecting the Number of Clusters
+##  Selecting the Number of Clusters
 
 Two approaches were used to determine the appropriate number of clusters.
 
@@ -169,9 +169,9 @@ Silhouette Scores were calculated for K values ranging from **2 to 10**.
 
 The highest score obtained was:
 
-### ⭐ K = 3
+###  K = 3
 
-### ⭐ Silhouette Score = 0.2510
+###  Silhouette Score = 0.2510
 
 ![Silhouette Scores](images/silhouette_scores.png)
 
@@ -179,7 +179,7 @@ Based on the evaluation, **3 clusters** were selected for the final K-Means mode
 
 ---
 
-## 🤖 K-Means Clustering
+##  K-Means Clustering
 
 The final model was trained using:
 
@@ -192,7 +192,7 @@ The final model was trained using:
 
 ---
 
-## 👥 Customer Segments
+##  Customer Segments
 
 The final clustering analysis identified three major customer groups.
 
@@ -257,7 +257,7 @@ The final clustering analysis identified three major customer groups.
 
 ---
 
-## 📊 Customer Segment Distribution
+##  Customer Segment Distribution
 
 The following visualization shows the distribution of customers across the three identified segments.
 
@@ -265,7 +265,7 @@ The following visualization shows the distribution of customers across the three
 
 ---
 
-## 📋 Cluster Profile
+##  Cluster Profile
 
 The average behaviour of each cluster was analysed using:
 
@@ -286,7 +286,7 @@ The average behaviour of each cluster was analysed using:
 
 ---
 
-## 🧠 PCA Visualization
+##  PCA Visualization
 
 Principal Component Analysis (**PCA**) was used to reduce the dimensionality of the dataset to two dimensions for visualization.
 
@@ -294,7 +294,7 @@ Principal Component Analysis (**PCA**) was used to reduce the dimensionality of 
 
 ---
 
-## 💡 Business Insights
+##  Business Insights
 
 ### 🟢 High-Value Active Customers
 
@@ -310,7 +310,7 @@ Customers showing high cash-advance usage and low full-payment behaviour may ben
 
 ---
 
-## 🎯 Business Applications
+##  Business Applications
 
 The segmentation framework can support:
 
@@ -327,7 +327,7 @@ The segmentation framework can support:
 
 ---
 
-## 📁 Repository Structure
+##  Repository Structure
 
 ```text
 bank-customer-segmentation/
@@ -347,7 +347,7 @@ bank-customer-segmentation/
 
 ---
 
-## 🚀 How to Run
+##  How to Run
 
 ### 1. Clone the repository
 
@@ -381,7 +381,7 @@ Execute the notebook from beginning to end.
 
 ---
 
-## 📌 Key Results
+##  Key Results
 
 | Metric | Result |
 |---|---|
@@ -393,7 +393,7 @@ Execute the notebook from beginning to end.
 
 ---
 
-## 📚 Key Learnings
+##  Key Learnings
 
 Through this project, I strengthened my understanding of:
 
@@ -411,7 +411,7 @@ Through this project, I strengthened my understanding of:
 
 ---
 
-## 👩‍💻 Author
+##  Author
 
 ### Saba Sultana
 
