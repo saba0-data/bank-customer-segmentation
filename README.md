@@ -410,6 +410,21 @@ Through this project, I strengthened my understanding of:
 - Translating Machine Learning Results into Business Insights
 
 ---
+![Feature Distributions](images/feature_distributions.png)
+
+![Correlation Matrix](images/correlation_matrix.png)
+
+![Elbow Method](images/elbow_method.png)
+
+![Silhouette Scores](images/silhouette_scores.png)
+
+![Customer Segment Distribution](images/cluster_distribution.png)
+
+![Cluster Profile](images/cluster_profile.png)
+
+![PCA Customer Segmentation](images/pca_clusters.png)
+
+---
 
 ##  Author
 
