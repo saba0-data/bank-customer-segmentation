@@ -1,1 +1,68 @@
+### Feature Distributions
 
+![Feature Distributions](Feature%20Distributions.png)
+
+### Correlation Matrix
+
+![Correlation Matrix](Correlation%20Matrix.png)
+
+---
+
+## 📐 Selecting the Number of Clusters
+
+Two approaches were used to determine the appropriate number of clusters.
+
+### 1. Elbow Method
+
+The Elbow Method was used to examine the **Within-Cluster Sum of Squares (WCSS)** for different values of K.
+
+![Elbow Method](Elbow%20Method.png)
+
+### 2. Silhouette Analysis
+
+Silhouette Scores were calculated for K values ranging from **2 to 10**.
+
+The highest score obtained was:
+
+### ⭐ K = 3
+
+### ⭐ Silhouette Score = 0.2510
+
+![Silhouette Scores](Silhouette%20Scores.png)
+
+---
+
+## 📊 Customer Segment Distribution
+
+The following visualization shows the distribution of customers across the three identified segments.
+
+![Customer Segment Distribution](Customer%20Segment%20Distribution.png)
+
+---
+
+## 📋 Cluster Profile
+
+The average behaviour of each cluster was analysed using:
+
+- Balance
+- Purchases
+- Credit Limit
+- Cash Advance
+- Payments
+- Percentage of Full Payment
+
+| Cluster | Balance | Purchases | Credit Limit | Cash Advance | Payments | Full Payment |
+|---|---:|---:|---:|---:|---:|---:|
+| **0** | 2,182.35 | 4,187.02 | 7,642.78 | 449.75 | 4,075.53 | 30% |
+| **1** | 807.72 | 496.06 | 3,267.02 | 339.00 | 907.45 | 15% |
+| **2** | 4,023.79 | 389.05 | 6,729.47 | 3,917.25 | 3,053.94 | 3% |
+
+![Cluster Profile](Cluster%20Profile.png)
+
+---
+
+## 🧠 PCA Visualization
+
+Principal Component Analysis (**PCA**) was used to reduce the dimensionality of the dataset to two dimensions for visualization.
+
+![PCA Customer Segmentation](PCA%20Customer%20Segmentation.png)
