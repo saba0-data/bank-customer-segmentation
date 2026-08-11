@@ -1,11 +1,11 @@
-# 🏦 Bank Customer Segmentation
+#  Bank Customer Segmentation
 
 > An end-to-end machine learning project that uses K-Means clustering to identify meaningful customer segments based on credit-card usage and financial behaviour.
 Customer segmentation of bank customers using K-Means clustering to uncover financial and credit-card usage patterns and generate actionable business insights.
 
 ---
 
-## 📌 Project Overview
+##  Project Overview
 
 Banks have customers with very different spending, payment and credit-card usage patterns. Treating every customer in the same way can lead to ineffective marketing and customer engagement strategies.
 
@@ -13,7 +13,7 @@ This project applies **unsupervised machine learning** to identify groups of cus
 
 The analysis uses **K-Means Clustering** to segment bank customers and translates the resulting clusters into actionable business insights.
 
-### 🎯 Objective
+###  Objective
 
 The primary objective is to:
 
@@ -25,7 +25,7 @@ The primary objective is to:
 
 ---
 
-## 📊 Dataset
+##  Dataset
 
 The project uses a credit-card customer dataset containing approximately **9,000 customer records** and multiple behavioural and financial attributes.
 
@@ -48,7 +48,7 @@ The project uses a credit-card customer dataset containing approximately **9,000
 
 ---
 
-# 🛠️ Technologies Used
+#  Technologies Used
 
 ### Programming
 - Python
@@ -74,7 +74,7 @@ The project uses a credit-card customer dataset containing approximately **9,000
 
 ---
 
-# 🔄 Project Workflow
+#  Project Workflow
 
 ```text
 Dataset
