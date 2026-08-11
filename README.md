@@ -1,40 +1,44 @@
 #  Bank Customer Segmentation
 
-> An end-to-end machine learning project using K-Means clustering to identify meaningful customer segments based on credit-card usage and financial behaviour.
+> An end-to-end unsupervised machine learning project that uses K-Means clustering to identify meaningful customer segments based on credit-card usage and financial behaviour.
 
 ---
 
 ##  Project Overview
 
-Banks have customers with very different spending, payment and credit-card usage patterns. Treating every customer in the same way can lead to ineffective marketing and customer engagement strategies.
+Customer segmentation helps financial institutions understand groups of customers with similar behavioural patterns.
 
-This project applies **unsupervised machine learning** to identify groups of customers with similar financial behaviours.
+This project analyzes credit-card customer data and applies **K-Means Clustering** to identify distinct customer segments based on financial activity, spending patterns, credit utilization and payment behaviour.
 
-###  Objective
+The goal is to transform customer behavioural data into **actionable business insights** that can support targeted marketing, customer engagement and financial product strategies.
 
-The objective is to:
+---
+
+##  Project Objective
+
+The primary objectives of this project are to:
 
 - Identify distinct customer behaviour patterns
 - Segment customers using unsupervised machine learning
 - Determine the optimal number of customer segments
 - Profile each customer segment
-- Generate actionable banking strategies
+- Visualize customer groups
+- Translate clustering results into actionable business recommendations
 
 ---
 
 ##  Technologies Used
 
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- Scikit-learn
-- K-Means Clustering
-- StandardScaler
-- PCA
-- Silhouette Analysis
-- Google Colab
+| Category | Technologies |
+|---|---|
+| **Programming** | Python |
+| **Data Analysis** | Pandas, NumPy |
+| **Visualization** | Matplotlib, Seaborn |
+| **Machine Learning** | Scikit-learn |
+| **Clustering** | K-Means |
+| **Dimensionality Reduction** | PCA |
+| **Cluster Evaluation** | Silhouette Analysis, Elbow Method |
+| **Environment** | Google Colab / Jupyter Notebook |
 
 ---
 
@@ -70,22 +74,22 @@ Business Recommendations
 
 ##  Dataset
 
-The dataset contains approximately **9,000 credit-card customer records** with **18 behavioural and financial variables**.
+The dataset contains approximately **8,950 credit-card customer records** and **18 variables** describing customer financial and behavioural patterns.
 
 ### Dataset Features
 
-| Variable Name | Description |
+| Variable | Description |
 |---|---|
-| `CUST_ID` | Identification of the credit card holder |
-| `BALANCE` | Balance amount available in the customer's account for making purchases |
-| `BALANCE_FREQUENCY` | Frequency with which the customer's balance is updated, ranging from 0 to 1 |
+| `CUST_ID` | Identification of the credit-card holder |
+| `BALANCE` | Balance amount available in the customer's account |
+| `BALANCE_FREQUENCY` | Frequency with which the customer's balance is updated |
 | `PURCHASES` | Total amount of purchases made through the account |
 | `ONEOFF_PURCHASES` | Maximum purchase amount made in a single transaction |
 | `INSTALLMENTS_PURCHASES` | Total amount of purchases made through installments |
 | `CASH_ADVANCE` | Amount of cash advance taken by the customer |
-| `PURCHASES_FREQUENCY` | Frequency of purchases made by the customer, ranging from 0 to 1 |
-| `ONEOFF_PURCHASES_FREQUENCY` | Frequency of one-off purchases, ranging from 0 to 1 |
-| `PURCHASES_INSTALLMENTS_FREQUENCY` | Frequency of installment purchases, ranging from 0 to 1 |
+| `PURCHASES_FREQUENCY` | Frequency of purchases made by the customer |
+| `ONEOFF_PURCHASES_FREQUENCY` | Frequency of one-off purchases |
+| `PURCHASES_INSTALLMENTS_FREQUENCY` | Frequency of installment purchases |
 | `CASH_ADVANCE_FREQUENCY` | Frequency of cash-advance transactions |
 | `CASH_ADVANCE_TRX` | Number of cash-advance transactions |
 | `PURCHASES_TRX` | Number of purchase transactions |
@@ -99,11 +103,11 @@ The dataset contains approximately **9,000 credit-card customer records** with *
 
 ##  Data Preprocessing
 
-The following preprocessing steps were performed:
+The following preprocessing steps were performed before clustering.
 
 ### 1. Duplicate Removal
 
-Duplicate customer records were identified and removed to ensure data quality.
+Duplicate customer records were identified and removed to improve data quality.
 
 ### 2. Missing Value Treatment
 
@@ -155,23 +159,37 @@ The analysis focused on:
 
 ##  Selecting the Number of Clusters
 
-Two approaches were used to determine the appropriate number of clusters.
+Two evaluation techniques were used to determine the appropriate number of clusters.
 
 ### 1. Elbow Method
 
-The Elbow Method was used to examine the **Within-Cluster Sum of Squares (WCSS)** for different values of K.
+The Elbow Method was used to evaluate the **Within-Cluster Sum of Squares (WCSS)** across different values of K.
 
 ![Elbow Method](images/elbow_method.png)
 
 ### 2. Silhouette Analysis
 
-Silhouette Scores were calculated for K values ranging from **2 to 10**.
+Silhouette Scores were calculated for different values of K from **2 to 10**.
 
-The highest score obtained was:
+The evaluated scores were:
 
-###  K = 3
+| K | Silhouette Score |
+|---:|---:|
+| 2 | 0.2100 |
+| 3 | **0.2510** |
+| 4 | 0.1977 |
+| 5 | 0.1931 |
+| 6 | 0.2029 |
+| 7 | 0.2077 |
+| 8 | 0.2217 |
+| 9 | 0.2260 |
+| 10 | 0.2204 |
 
-###  Silhouette Score = 0.2510
+###  Selected Model
+
+**K = 3**
+
+**Best Silhouette Score = 0.2510**
 
 ![Silhouette Scores](images/silhouette_scores.png)
 
@@ -181,24 +199,24 @@ Based on the evaluation, **3 clusters** were selected for the final K-Means mode
 
 ##  K-Means Clustering
 
-The final model was trained using:
+The final clustering model was trained using:
 
 | Parameter | Value |
 |---|---|
 | **Algorithm** | K-Means |
 | **Number of Clusters** | 3 |
 | **Random State** | 42 |
-| **Number of Initializations** | 10 |
+| **Initializations** | 10 |
+
+Each customer was assigned to one of the three identified behavioural segments.
 
 ---
 
 ##  Customer Segments
 
-The final clustering analysis identified three major customer groups.
-
 ### 🟢 Cluster 0 — High-Value Active Customers
 
-**Characteristics:**
+#### Characteristics
 
 - High purchase activity
 - High payment activity
@@ -206,9 +224,9 @@ The final clustering analysis identified three major customer groups.
 - Relatively low cash-advance usage
 - Higher full-payment behaviour
 
-**Business Strategy:**
+####  Business Recommendations
 
-- Premium credit cards
+- Premium credit-card offerings
 - Exclusive rewards
 - Cashback programs
 - Personalized offers
@@ -217,16 +235,16 @@ The final clustering analysis identified three major customer groups.
 
 ---
 
-### 🔵 Cluster 1 — Low-Engagement Customers
+###  Cluster 1 — Low-Engagement Customers
 
-**Characteristics:**
+#### Characteristics
 
 - Lower purchase activity
 - Lower payment activity
 - Lower balance
 - Lower credit limit compared with other segments
 
-**Business Strategy:**
+####  Business Recommendations
 
 - Cashback campaigns
 - Personalized promotions
@@ -236,38 +254,38 @@ The final clustering analysis identified three major customer groups.
 
 ---
 
-### 🔴 Cluster 2 — Cash-Advance Heavy Customers
+###  Cluster 2 — Cash-Advance Heavy Customers
 
-**Characteristics:**
+#### Characteristics
 
 - High balance
 - Very high cash-advance usage
 - Relatively low purchase activity
 - Very low full-payment ratio
 
-**Business Strategy:**
+####  Business Recommendations
 
 - Monitor cash-advance behaviour
 - Encourage healthier repayment behaviour
 - Offer appropriate financial-management products
 - Provide personalized financial guidance
-- Evaluate for additional credit-risk monitoring
+- Consider additional behavioural monitoring
 
-> **Note:** The clustering model identifies behavioural patterns. It does not prove that customers are in default or are definitively high-risk.
+> **Note:** The clustering model identifies behavioural patterns. It does not prove that customers are in default or definitively high-risk.
 
 ---
 
 ##  Customer Segment Distribution
 
-The following visualization shows the distribution of customers across the three identified segments.
+The following visualization shows how customers are distributed across the three identified segments.
 
-![Customer Segment Distribution](images/cluster_distribution.png)
+![Customer Segment Distribution](images/customer_segment_distribution.png)
 
 ---
 
 ##  Cluster Profile
 
-The average behaviour of each cluster was analysed using:
+The average behaviour of each cluster was analyzed using:
 
 - Balance
 - Purchases
@@ -288,25 +306,27 @@ The average behaviour of each cluster was analysed using:
 
 ##  PCA Visualization
 
-Principal Component Analysis (**PCA**) was used to reduce the dimensionality of the dataset to two dimensions for visualization.
+**Principal Component Analysis (PCA)** was used to reduce the dimensionality of the feature space to two principal components for visualization.
 
-![PCA Customer Segmentation](images/pca_clusters.png)
+![PCA Customer Segmentation](images/pca_customer_segmentation.png)
+
+The PCA visualization provides a two-dimensional representation of the identified customer groups.
 
 ---
 
-##  Business Insights
+##  Key Business Insights
 
 ### 🟢 High-Value Active Customers
 
-Customers with strong purchase and payment activity can be targeted with premium services, exclusive rewards and loyalty programs.
+This segment demonstrates strong purchase and payment activity and can be targeted with premium services, loyalty benefits and personalized offers.
 
 ### 🔵 Low-Engagement Customers
 
-Customers with lower activity can be targeted with personalized campaigns designed to increase card usage and customer engagement.
+This group shows relatively low activity and can be targeted with campaigns designed to increase card usage and engagement.
 
 ### 🔴 Cash-Advance Heavy Customers
 
-Customers showing high cash-advance usage and low full-payment behaviour may benefit from closer behavioural monitoring and appropriate financial products.
+This group demonstrates high cash-advance usage combined with low full-payment behaviour. These behavioural patterns can be monitored and addressed through appropriate financial products and engagement strategies.
 
 ---
 
@@ -332,7 +352,7 @@ The segmentation framework can support:
 ```text
 bank-customer-segmentation/
 │
-├── bank_customer_segmentation.ipynb
+├── Bank_Customer_Segmentation.ipynb
 ├── README.md
 │
 └── images/
@@ -340,42 +360,42 @@ bank-customer-segmentation/
     ├── correlation_matrix.png
     ├── elbow_method.png
     ├── silhouette_scores.png
-    ├── cluster_distribution.png
+    ├── customer_segment_distribution.png
     ├── cluster_profile.png
-    └── pca_clusters.png
+    └── pca_customer_segmentation.png
 ```
 
 ---
 
 ##  How to Run
 
-### 1. Clone the repository
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/saba0-data/bank-customer-segmentation.git
 ```
 
-### 2. Open the notebook
+### 2. Open the Notebook
 
 Open:
 
 ```text
-bank_customer_segmentation.ipynb
+Bank_Customer_Segmentation.ipynb
 ```
 
 using **Google Colab** or **Jupyter Notebook**.
 
-### 3. Upload the dataset
+### 3. Upload the Dataset
 
-Upload the required credit-card customer dataset when prompted.
+Upload the required credit-card customer dataset when prompted by the notebook.
 
-### 4. Install dependencies
+### 4. Install Dependencies
 
 ```bash
 pip install pandas numpy matplotlib seaborn scikit-learn
 ```
 
-### 5. Run all cells
+### 5. Run All Cells
 
 Execute the notebook from beginning to end.
 
@@ -389,7 +409,7 @@ Execute the notebook from beginning to end.
 | **Final Clusters** | **3** |
 | **Best Silhouette Score** | **0.2510** |
 | **Algorithm** | **K-Means** |
-| **Visualization** | **PCA** |
+| **Dimensionality Reduction** | **PCA** |
 
 ---
 
@@ -399,44 +419,16 @@ Through this project, I strengthened my understanding of:
 
 - Unsupervised Machine Learning
 - K-Means Clustering
-- Feature Preprocessing
+- Data Cleaning
+- Exploratory Data Analysis
 - Log Transformation
 - Feature Scaling
-- Cluster Evaluation
+- Elbow Method
 - Silhouette Analysis
 - PCA
 - Customer Profiling
 - Business-oriented Data Analysis
 - Translating Machine Learning Results into Business Insights
-
----
-### Feature Distributions
-
-![Feature Distributions](images/feature_distributions.png)
-
-### Correlation Matrix
-
-![Correlation Matrix](images/correlation_matrix.png)
-
-### Elbow Method
-
-![Elbow Method](images/elbow_method.png)
-
-### Silhouette Scores
-
-![Silhouette Scores](images/silhouette_scores.png)
-
-### Customer Segment Distribution
-
-![Customer Segment Distribution](images/customer_segment_distribution.png)
-
-### Cluster Profile
-
-![Cluster Profile](images/cluster_profile.png)
-
-### PCA Customer Segmentation
-
-![PCA Customer Segmentation](images/pca_customer_segmentation.png)
 
 ---
 
