@@ -100,10 +100,10 @@ Customer Profiling
 PCA Visualization
    ↓
 Business Recommendations
-   ↓
-Business Recommendations
 
-## 🧹 Data Preprocessing
+
+
+##  Data Preprocessing
 
 The following preprocessing steps were performed:
 
@@ -136,7 +136,7 @@ A `log1p()` transformation was applied to reduce the influence of extreme values
 
 ---
 
-## 📈 Exploratory Data Analysis
+##  Exploratory Data Analysis
 
 Exploratory Data Analysis (EDA) was performed to understand customer behaviour and identify patterns across important financial variables.
 
@@ -159,7 +159,7 @@ The analysis focused on:
 
 ---
 
-## 📐 Selecting the Number of Clusters
+##  Selecting the Number of Clusters
 
 Two approaches were used to determine the appropriate number of clusters:
 
@@ -175,9 +175,9 @@ Silhouette Scores were calculated for K values ranging from **2 to 10**.
 
 The highest score obtained during the analysis was:
 
-### ⭐ K = 3
+###  K = 3
 
-### ⭐ Silhouette Score = 0.2510
+###  Silhouette Score = 0.2510
 
 ![Silhouette Scores](images/silhouette_scores.png)
 
@@ -185,7 +185,7 @@ Based on the evaluation, **3 clusters** were selected for the final K-Means mode
 
 ---
 
-## 🤖 K-Means Clustering
+##  K-Means Clustering
 
 The final model was trained using:
 
@@ -200,11 +200,11 @@ Each customer was assigned to one of the three behavioural segments.
 
 ---
 
-## 👥 Customer Segments
+##  Customer Segments
 
 The final clustering analysis identified three major customer groups.
 
-### 🟢 Cluster 0 — High-Value Active Customers
+###  Cluster 0 — High-Value Active Customers
 
 #### Characteristics
 
@@ -214,7 +214,7 @@ The final clustering analysis identified three major customer groups.
 - Relatively low cash-advance usage
 - Higher full-payment behaviour
 
-#### 💼 Business Strategy
+####  Business Strategy
 
 Potential strategies include:
 
@@ -227,7 +227,7 @@ Potential strategies include:
 
 ---
 
-### 🔵 Cluster 1 — Low-Engagement Customers
+###  Cluster 1 — Low-Engagement Customers
 
 #### Characteristics
 
@@ -236,7 +236,7 @@ Potential strategies include:
 - Lower balance
 - Lower credit limit compared with other segments
 
-#### 💼 Business Strategy
+####  Business Strategy
 
 Potential strategies include:
 
@@ -248,7 +248,7 @@ Potential strategies include:
 
 ---
 
-### 🔴 Cluster 2 — Cash-Advance Heavy Customers
+###  Cluster 2 — Cash-Advance Heavy Customers
 
 #### Characteristics
 
@@ -257,7 +257,7 @@ Potential strategies include:
 - Relatively low purchase activity
 - Very low full-payment ratio
 
-#### 💼 Business Strategy
+####  Business Strategy
 
 Potential strategies include:
 
@@ -271,7 +271,7 @@ Potential strategies include:
 
 ---
 
-## 📊 Customer Segment Distribution
+## Customer Segment Distribution
 
 The chart below shows the distribution of customers across the three identified behavioural segments.
 
@@ -279,7 +279,7 @@ The chart below shows the distribution of customers across the three identified 
 
 ---
 
-## 📋 Cluster Profile
+## Cluster Profile
 
 The average behaviour of each cluster was analysed using:
 
@@ -302,7 +302,7 @@ The average behaviour of each cluster was analysed using:
 
 ---
 
-## 🧠 PCA Visualization
+## PCA Visualization
 
 **Principal Component Analysis (PCA)** was used to reduce the dimensionality of the dataset to two dimensions for visualization.
 
@@ -312,7 +312,7 @@ The visualization provides a two-dimensional view of the identified customer gro
 
 ---
 
-## 💡 Business Insights
+## Business Insights
 
 The clustering analysis provides several actionable insights.
 
@@ -330,7 +330,7 @@ Customers showing high cash-advance usage and low full-payment behaviour may ben
 
 ---
 
-## 🎯 Business Applications
+## Business Applications
 
 The segmentation framework can support:
 
@@ -347,7 +347,7 @@ The segmentation framework can support:
 
 ---
 
-## 📁 Repository Structure
+##  Repository Structure
 
 ```text
 bank-customer-segmentation/
@@ -363,3 +363,7 @@ bank-customer-segmentation/
     ├── cluster_distribution.png
     ├── cluster_profile.png
     └── pca_clusters.png
+
+
+
+
